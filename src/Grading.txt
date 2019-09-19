@@ -1,0 +1,44 @@
+Graded 9/18 by Mark Congdon
+
+Total Score:		25/25
+
+Compiles and Runs:	15/15
+Correct Output:		6/6
+Consistent Style:	2/2
+Efficiency:			2/2
+
+Good work!
+
+For future projects, you will want to start adding comments.
+Everybody does comments slightly differently, but at a minimum
+it would have been good to have a comment for the set of
+methods that did the verses, and a comment for the set of
+methods that did the individual lines within the verses.
+
+You have some good structure and efficiency, but you're not quite
+consistent with it.  You use MaltJack() at the end of RatThree(),
+which is excellent.  You use it at the end of CatFour() as well,
+which is good, though it would have been even better if you had used
+RatThree() at the end of CatFour() instead, and you would have been able to
+get rid of one additional line.  Still, that was really good.  But for
+DogFive(), you didn't stick with that structure of calling the
+previous methods, but instead listed out all the lines.  If you had
+made DogFive() print its line then call into CatFour(), for example,
+that would have removed quite a few redundant println commands.  No
+points off for that, though.  You did a good job of building structure
+and efficiency.
+
+
+You have quite a few repeated println statements.  If you needed
+to change the wording, for instance, you would have to change it
+in quite a few different places.  If you put those statements into
+methods and call them, as you did with the Jack() method, the
+program would be more efficient to maintain.
+
+There is one efficiency that could be added.  Notice that
+every time you call Ate(), you call Lay() immediately afterwards.
+Therefore, you could add Lay() at the end of your Ate() method, and
+remove it from the verse methods.  Then, you could do the same thing
+with Killed (add Ate() at the end of it), etc.  Your Maiden() function,
+then, would have just your first printed line, and the Milked()
+method, and everything else would happen automatically.
